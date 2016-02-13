@@ -61,15 +61,15 @@ def init():
 		inputs=driver.find_elements_by_css_selector('.inputtext')
 		inputs[0].send_keys(email)
 		inputs[1].send_keys(password)
-		driver.find_element_by_id('u_0_l').click()
+		driver.find_element_by_id('loginbutton').click()
 		driver.implicitly_wait(10)
 		if str(driver.current_url).split('=')[0] == 'https://www.facebook.com/login.php?login_attempt':
 			if os.name == 'nt':
 				cl=os.system('cls')
-			else : 
+			else :
 				cl=os.system('clear')
 			print('Invalid Email/Password')
-		else: 
+		else:
 			cont=True
 
 	print('Loading...\n')
